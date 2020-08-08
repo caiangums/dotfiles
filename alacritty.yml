@@ -11,9 +11,9 @@ window:
 
   dynamic_padding: false
 
-  decorations: none
+  decorations: full
 
-  startup_mode: Fullscreen
+  startup_mode: Maximized
 
   title: "@caiagums"
 
