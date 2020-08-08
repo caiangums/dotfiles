@@ -60,6 +60,16 @@ __create_git_config() {
     echo "[config] git - end"
 }
 
+__create_vimrc() {
+    __VIMRC_FILE=".vimrc"
+
+    echo "[config] vim - start"
+    __backup_old_file "$HOME/$__VIMRC_FILE"
+
+    ln -s "$HOME/$__DOTFILE_DIR/$__VIMRC_FILE" "$HOME/$__VIMRC_FILE"
+    echo "[config] vim - end"
+}
+
 __create_zshrc
 
 __create_alacritty_config
@@ -67,3 +77,5 @@ __create_alacritty_config
 __create_tmux_config
 
 __create_git_config
+
+__create_vimrc
