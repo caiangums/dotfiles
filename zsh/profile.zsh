@@ -11,9 +11,9 @@ __git_integration() {
     setopt prompt_subst
     # setup RPROMPT var + configs
     RPROMPT=\$vcs_info_msg_0_
-    zstyle ':vcs_info:git:*' formats "%c%u %F{240}%b%f"
-    zstyle ':vcs_info:*:*' stagedstr '%B%F{green}+%f%b'
-    zstyle ':vcs_info:*:*' unstagedstr '%B%F{red}+%f%b'
+    zstyle ':vcs_info:git:*' formats "%c%u %F{250}%b%f"
+    zstyle ':vcs_info:*:*' stagedstr '%B%F{46}+%f%b'
+    zstyle ':vcs_info:*:*' unstagedstr '%B%F{196}+%f%b'
     zstyle ':vcs_info:git:*' check-for-changes true
     zstyle ':vcs_info:*' enable git
 }
@@ -21,5 +21,5 @@ __git_integration() {
 __git_integration
 
 # setup prompt
-PROMPT='%B%F{blue}cg%f%b: %F{green}%~%f $ '
+PROMPT='%B%F{14}cg%f%b: %F{10}%~%f $ '
 
