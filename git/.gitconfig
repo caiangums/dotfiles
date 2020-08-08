@@ -1,0 +1,6 @@
+[user]
+	name = Ilê Caian
+	email = ile.caian@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+
