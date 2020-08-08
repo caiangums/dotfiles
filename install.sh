@@ -1,7 +1,8 @@
 #!/bin/sh
 
+__DOTFILE_DIR=".dotfiles"
+
 __create_zshrc() {
-    __DOTFILE_DIR=".dotfiles"
     __ZSH_FILE=".zshrc"
 
     echo "create symlink for .zshrc"
@@ -11,11 +12,10 @@ __create_zshrc() {
     fi
 
     ln -s "$HOME/$__DOTFILE_DIR/$__ZSH_FILE" "$HOME/$__ZSH_FILE"
-    echo "created!"
+    echo "created"
 }
 
 __create_alacritty_config() {
-    __DOTFILE_DIR=".dotfiles"
     __ALACRITTY_DIR="$HOME/.config/alacritty"
     __ALACRITTY_FILE="alacritty.yml"
 
@@ -34,6 +34,22 @@ __create_alacritty_config() {
     echo "created"
 }
 
+__create_tmux_config() {
+    __TMUX_CONF_FILE=".tmux.conf"
+
+    echo "creating symlink for .tmux.conf"
+    if [ -f "$HOME/$__TMUX_CONF_FILE" ]; then
+        echo " saving old config..."
+        mv "$HOME/$__TMUX_CONF_FILE" "$HOME/$__TMUX_CONF_FILE.old"
+    fi
+
+    ln -s "$HOME/$__DOTFILE_DIR/$__TMUX_CONF_FILE" "$HOME/$__TMUX_CONF_FILE"
+    echo "created"
+}
+
 __create_zshrc
 
 __create_alacritty_config
+
+__create_tmux_config
+
