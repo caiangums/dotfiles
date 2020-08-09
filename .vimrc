@@ -1,8 +1,17 @@
 " < vim-plug >
 call plug#begin('~/.vim/plugged')
 
-" Dracula Colorscheme
-Plug 'dracula/vim', { 'as': 'dracula' }
+" xcode colorscheme
+Plug 'arzg/vim-colors-xcode'
+
+" JS syntax highlight
+Plug 'yuezk/vim-js'
+
+" JSX syntax highlight
+Plug 'maxmellon/vim-jsx-pretty'
+
+" Search engine
+Plug 'ctrlpvim/ctrlp.vim'
 
 " EditorConfig Vim
 Plug 'editorconfig/editorconfig-vim'
@@ -13,15 +22,36 @@ Plug 'elixir-editors/vim-elixir'
 call plug#end()
 " </ vim-plug >
 
-" enable colorscheme
-colorscheme dracula
+" < plugins >
+" [arzg/vim=colors-xcode] enable colorscheme
+colorscheme xcodedarkhc
+" set green comments for theme
+let g:xcodedarkhc_green_comments = 1
 
+" [ctrlp] Hide files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" [ctrlp] Show dotfiles
+let g:ctrlp_show_hidden = 1
+" </ plugins >
+
+" < general >
 " syntax enabled
 syntax enable
 " show numbers
 set nu       
+" set relative number
+set nu relativenumber
 " enable filetype detection
 filetype plugin indent on
+
+" set colorcolumn to 180
+set colorcolumn=180
+
+" avoid *.swp and backup files
+set nowritebackup
+set noswapfile
+set nobackup
+" </ general >
 
 " < identation >
 " Number of spaces in a tab.
@@ -39,6 +69,14 @@ set expandtab
 " Use backspace to remove indentation, end or start of lines.
 set backspace=indent,eol,start
 " </ identation >
+
+" < search highlight >
+"highlight search matches
+set hls
+
+"higlight on search
+set is
+" </ search highlight >
 
 " < remap >
 " map ^s to save as :w in normal mode
