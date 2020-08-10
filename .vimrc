@@ -16,6 +16,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " EditorConfig Vim
 Plug 'editorconfig/editorconfig-vim'
 
+" Vim Prettier
+Plug 'prettier/vim-prettier'
+
 " Elixir support
 Plug 'elixir-editors/vim-elixir'
 
@@ -32,6 +35,12 @@ let g:xcodedarkhc_green_comments = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " [ctrlp] Show dotfiles
 let g:ctrlp_show_hidden = 1
+
+" [editorconfig-vim] show verbose messages
+let g:editorconfig_verbose = 1
+
+" [vim-prettier] enable autoformat
+let g:prettier#autoformat_require_pragma = 0
 " </ plugins >
 
 " < general >
