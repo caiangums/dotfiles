@@ -15,7 +15,7 @@ window:
 
   startup_mode: Maximized
 
-  title: "@caiagums"
+  title: "@caiangums"
 
 scrolling:
   history: 10000
@@ -101,7 +101,7 @@ schemes:
       cyan: '#95E6CB'
       white: '#FFFFFF'
 
-colors: *ayu_dark
+colors: *default
 
 # Specifying a `duration` of `0` will disable the visual bell.
 visual_bell:
