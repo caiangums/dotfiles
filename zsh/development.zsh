@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# python - Setup pyenv for multiple envs
+# [python] - Setup pyenv for multiple envs
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -12,20 +12,18 @@ export LC_ALL=en_US.UTF-8
 # locale
 export LC_CTYPE=C
 
-# nvm stuff
-#export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
-
-# yarn - Add yarn to $PATH
+# [yarn] - Add yarn to $PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# node - Setup LTS version
+# [node] - Setup NodeJS 12 (LTS) version
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
-# android - Android paths for React Native
+# [android] - Android paths for React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+# for some cases, your $JAVA_HOME will not be properly configured
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
