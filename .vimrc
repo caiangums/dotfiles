@@ -10,6 +10,10 @@ Plug 'yuezk/vim-js'
 " JSX syntax highlight
 Plug 'maxmellon/vim-jsx-pretty'
 
+" TS/TSX syntax highlight
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 " Search engine
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -21,6 +25,9 @@ Plug 'prettier/vim-prettier'
 
 " Elixir support
 Plug 'elixir-editors/vim-elixir'
+
+" Vim Gitgutter
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 " </ vim-plug >
@@ -41,6 +48,9 @@ let g:editorconfig_verbose = 1
 
 " [vim-prettier] enable autoformat
 let g:prettier#autoformat_require_pragma = 0
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 " </ plugins >
 
 " < general >
@@ -77,13 +87,15 @@ set expandtab
 
 " Use backspace to remove indentation, end or start of lines.
 set backspace=indent,eol,start
+
+autocmd FileType javascript,typescript,typescript.tsx setlocal ts=2 sts=2 sw=2
 " </ identation >
 
 " < search highlight >
-"highlight search matches
+" highlight search matches
 set hls
 
-"higlight on search
+" higlight on search
 set is
 " </ search highlight >
 
@@ -96,3 +108,8 @@ inoremap <silent> <C-s> <esc>:w<cr>a
 " stty -ixon
 " < \remap >
 
+" < commands >
+" lint actual file with eslint (requires yarn + eslint configured)
+:command Eslint ! yarn eslint % --fix
+
+" < \commands >
