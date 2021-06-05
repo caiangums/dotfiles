@@ -20,19 +20,13 @@ __create_zshrc() {
 }
 
 __create_alacritty_config() {
-    __ALACRITTY_DIR="$HOME/.config/alacritty"
-    __ALACRITTY_FILE="alacritty.yml"
-
-    if [ ! -d "$__ALACRITTY_DIR" ]; then
-        echo "[config] Alacritty - not installed"
-        return;
-    fi
+    __ALACRITTY_FILE=".alacritty.yml"
 
     echo "[config] Alacritty - start"
 
-    __backup_old_file "$__ALACRITTY_DIR/$__ALACRITTY_FILE"
+    __backup_old_file "$HOME/$__ALACRITTY_FILE"
 
-    ln -s "$HOME/$__DOTFILE_DIR/$__ALACRITTY_FILE" "$__ALACRITTY_DIR/$__ALACRITTY_FILE"
+    ln -s "$HOME/$__DOTFILE_DIR/$__ALACRITTY_FILE" "$HOME/$__ALACRITTY_FILE"
     echo "[config] Alacritty - end"
 }
 
