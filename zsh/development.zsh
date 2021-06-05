@@ -15,8 +15,8 @@ export LC_CTYPE=C
 # [yarn] - Add yarn to $PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# [node] - Setup NodeJS 12 (LTS) version
-export PATH="/usr/local/opt/node@12/bin:$PATH"
+# [node] - Setup NodeJS 14 (LTS) version
+export PATH="/usr/local/opt/node@14/bin:$PATH"
 
 # [android] - Android paths for React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
