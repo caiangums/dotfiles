@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 # [python] - Setup pyenv for multiple envs
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
