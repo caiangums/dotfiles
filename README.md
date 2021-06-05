@@ -9,6 +9,11 @@ That's my dotfiles repo. I like to do it **simple** and **minimal**.
 - [tmux](https://github.com/tmux/tmux) - terminal multiplexer
 - [vim](https://www.vim.org/) - text editor
 
+## 🐺 What about the first setup?
+
+Configuring a new machine doesn't have to be painful. See the `setup/` directory and check your flavor:
+- [MacOS](setup/mac.sh)
+- _Linux_ (TBD)
 
 ## 🤔 Why do you use X instead of Y?
 
