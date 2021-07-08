@@ -29,7 +29,10 @@ scrolling:
 tabspaces: 8
 
 font:
+  # default
   size: 11.0
+  # sharing screen
+  # size: 14.0
 
   offset:
     x: 0
