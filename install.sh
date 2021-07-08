@@ -64,6 +64,16 @@ __create_vimrc() {
     echo "[config] vim - end"
 }
 
+__create_asdfrc() {
+    __ASDFRC_FILE=".asdfrc"
+
+    echo "[config] asdf - start"
+    __backup_old_file "$HOME/$__ASDFRC_FILE"
+
+    ln -s "$HOME/$__DOTFILE_DIR/$__ASDFRC_FILE" "$HOME/$__ASDFRC_FILE"
+    echo "[config] asdf - end"
+}
+
 __create_zshrc
 
 __create_alacritty_config
@@ -73,3 +83,5 @@ __create_tmux_config
 __create_git_config
 
 __create_vimrc
+
+__create_asdfrc

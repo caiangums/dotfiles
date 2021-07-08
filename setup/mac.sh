@@ -15,11 +15,11 @@ brew install tmux
 echo " - vscode"
 brew install --cask visual-studio-code
 
-echo " - tig"
-brew install tig
+echo " - docker"
+brew install --cask docker
 
-echo " - bat"
-brew install bat
+echo " - CLI tools (tig, bat, asdf, tree)"
+brew install tig bat asdf gnupg tree
 # </applications>
 
 # <configs>
@@ -41,12 +41,27 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # <environment>
 echo "\nenvironment"
 
-echo " - [web] node v14 (LTS)"
-brew install node@14
-ln -s /usr/local/opt/node@14 /usr/local/opt/node
+echo " - [web] node v14 \(LTS\)"
+asdf plugin-add nodejs
+asdf install nodejs 14.17.0
+asdf global nodejs 14.17.0
 
-echo " - [web] yarn - install manually with"
-echo "   $ npm install --global yarn\n"
+echo " - [web] ruby v3"
+asdf plugin-add ruby
+asdf install ruby 3.0.1
+asdf global ruby 3.0.1
+
+echo " - [web] postgres v13"
+asdf plugin-add postgres
+asdf install postgres 13.3
+asdf global postgres 13.3
+
+# echo " - [web] node v14 (LTS)"
+# asdf plugin-add nodejs
+# asdf install nodejs 14.17.0
+
+# echo " - [web] yarn - install manually with"
+# echo "   $ npm install --global yarn\n"
 
 echo " - [react-native] watchman"
 brew install watchman
@@ -60,4 +75,7 @@ brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 # </environment>
 
 echo "\nAll setted up! :)"
+echo \
+    "\nAlso, don't forget to:" \
+    "\n - open vim and run :PlugInstall"
 
