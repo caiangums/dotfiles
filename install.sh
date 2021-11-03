@@ -54,6 +54,8 @@ __create_git_config() {
     echo "[config] git - end"
 }
 
+__VIMRC_FILE=".vimrc"
+
 __create_vimrc() {
     __VIMRC_FILE=".vimrc"
 
@@ -62,6 +64,19 @@ __create_vimrc() {
 
     ln -s "$HOME/$__DOTFILE_DIR/$__VIMRC_FILE" "$HOME/$__VIMRC_FILE"
     echo "[config] vim - end"
+}
+
+__NEOVIM_DIR=".config/nvim"
+__NEOVIMRC_FILE="init.vim"
+__create_neovimrc() {
+    echo "[config] neovim - start"
+    mkdir -p "$HOME/$__NEOVIM_DIR"
+
+    __backup_old_file "$HOME/$__NEOVIM_DIR/$__NEOVIMRC_FILE"
+
+    ln -s "$HOME/$__DOTFILE_DIR/$__VIMRC_FILE" "$HOME/$__NEOVIM_DIR/$__NEOVIMRC_FILE"
+
+    echo "[config] neovim - end"
 }
 
 __create_asdfrc() {
@@ -83,5 +98,7 @@ __create_tmux_config
 __create_git_config
 
 __create_vimrc
+
+__create_neovimrc
 
 __create_asdfrc

@@ -18,8 +18,15 @@ brew install --cask visual-studio-code
 echo " - docker"
 brew install --cask docker
 
-echo " - CLI tools (tig, bat, asdf, tree)"
-brew install tig bat asdf gnupg tree
+echo " - neovim (I'm still trying it out!)"
+brew install neovim
+
+echo " - general CLI tools"
+brew install tig bat \
+    asdf gnupg \
+    tree \
+    hugo \
+    exercism
 # </applications>
 
 # <configs>
@@ -36,15 +43,20 @@ echo "\nplugins"
 echo " - vim-plug (:PlugInstall required)"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo " - vim-plug for neovim (:PlugInstall required)"
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # </plugins>
 
 # <environment>
 echo "\nenvironment"
 
-echo " - [web] node v14 \(LTS\)"
+echo " - [web] node v16 \(LTS\)"
 asdf plugin-add nodejs
-asdf install nodejs 14.17.0
-asdf global nodejs 14.17.0
+# asdf install nodejs 14.17.0 # v14 if needed
+asdf install nodejs 16.13.0
+asdf global nodejs 16.13.0
 
 echo " - [web] ruby v3"
 asdf plugin-add ruby
@@ -55,13 +67,6 @@ echo " - [web] postgres v13"
 asdf plugin-add postgres
 asdf install postgres 13.3
 asdf global postgres 13.3
-
-# echo " - [web] node v14 (LTS)"
-# asdf plugin-add nodejs
-# asdf install nodejs 14.17.0
-
-# echo " - [web] yarn - install manually with"
-# echo "   $ npm install --global yarn\n"
 
 echo " - [react-native] watchman"
 brew install watchman
