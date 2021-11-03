@@ -19,3 +19,10 @@ contest_compile() {
     g++ -std=c++14 $1 -o $2 -Wl
 }
 
+# connect to local postgres database through psql
+alias dbcon="psql -h localhost -p 5432 -d postgres"
+
+# neovim
+alias vim="nvim"
+# vim
+alias v="vim ."
