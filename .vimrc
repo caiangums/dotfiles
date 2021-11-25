@@ -4,10 +4,6 @@ call plug#begin('~/.vim/plugged')
 " xcode colorscheme
 Plug 'arzg/vim-colors-xcode'
 
-" nord-vim colorscheme
-" Plug 'arcticicestudio/nord-vim'
-" Issue: No VISUAL selection :sad-pepe:
-
 " JS syntax highlight
 Plug 'yuezk/vim-js'
 
@@ -27,9 +23,6 @@ Plug 'editorconfig/editorconfig-vim'
 " Vim Prettier
 Plug 'prettier/vim-prettier'
 
-" Elixir support
-Plug 'elixir-editors/vim-elixir'
-
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
 
@@ -39,7 +32,6 @@ call plug#end()
 " < plugins >
 " [arzg/vim=colors-xcode] enable colorscheme
 colorscheme xcodedarkhc
-" colorscheme nord
 " set green comments for theme
 let g:xcodedarkhc_green_comments = 1
 
