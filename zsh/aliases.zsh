@@ -4,6 +4,7 @@
 alias g="git"
 alias gs="g status"
 alias gco="g checkout"
+alias gcl="g clone"
 alias gcb="gco -b"
 alias ga="g add"
 alias gr="g reset"
@@ -22,7 +23,8 @@ contest_compile() {
 # connect to local postgres database through psql
 alias dbcon="psql -h localhost -p 5432 -d postgres"
 
-# neovim
+# editor
+# use neovim instead of vim
 alias vim="nvim"
-# vim
+# open vim at the actual directory
 alias v="vim ."
