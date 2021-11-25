@@ -12,13 +12,10 @@ brew install --cask alacritty
 echo " - tmux"
 brew install tmux
 
-echo " - vscode"
-brew install --cask visual-studio-code
-
 echo " - docker"
 brew install --cask docker
 
-echo " - neovim (I'm still trying it out!)"
+echo " - neovim"
 brew install neovim
 
 echo " - general CLI tools"
