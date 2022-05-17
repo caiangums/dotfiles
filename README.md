@@ -1,6 +1,6 @@
 # 📚 dotfiles
 
-That's my dotfiles repo. I like to do it **simple** and **minimal**.
+Personal dotfiles repo. **Simple** and **=Minimal**.
 
 ## 📦 What I use
 
@@ -15,10 +15,6 @@ That's my dotfiles repo. I like to do it **simple** and **minimal**.
 Configuring a new machine doesn't have to be painful. See the `setup/` directory and check your flavor:
 - [MacOS](setup/mac.sh)
 - _Linux_ (TBD)
-
-## 🤔 Why do you use X instead of Y?
-
-Personal choices. Facing that as a goal and not as a path limit the possibility to improve.
 
 ## 🧙‍♂️ Why focused in simplicity?
 
@@ -39,3 +35,12 @@ $ ./install.sh
 ```
 
 3. [optional] **vim**/**neovim** - Open editor and run `:PlugInstall`
+
+## 🤔 Why do you use X instead of Y?
+
+Personal choices. Facing that as a goal and not as a path limit the possibility to improve.
+
+> _And what about [OhMyZsh](https://ohmyz.sh/)?_
+
+I like it and used it before. But I prefer maintain my own configs based on what best fits me.
+
