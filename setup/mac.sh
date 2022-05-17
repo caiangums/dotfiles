@@ -52,18 +52,18 @@ echo "\nenvironment"
 echo " - [web] node v16 \(LTS\)"
 asdf plugin-add nodejs
 # asdf install nodejs 14.17.0 # v14 if needed
-asdf install nodejs 16.13.0
-asdf global nodejs 16.13.0
+asdf install nodejs 16.15.0
+asdf global nodejs 16.15.0
 
 echo " - [web] ruby v3"
 asdf plugin-add ruby
-asdf install ruby 3.0.1
-asdf global ruby 3.0.1
+asdf install ruby 3.0.4
+asdf global ruby 3.0.4
 
 echo " - [web] postgres v13"
 asdf plugin-add postgres
-asdf install postgres 13.3
-asdf global postgres 13.3
+asdf install postgres 13.7
+asdf global postgres 13.7
 
 echo " - [react-native] watchman"
 brew install watchman
