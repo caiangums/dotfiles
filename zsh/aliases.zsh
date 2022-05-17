@@ -11,9 +11,6 @@ alias gr="g reset"
 alias gc="g commit"
 alias gcm="gc -m"
 
-# old python version
-alias python2='python2.7'
-
 # contest compilation
 contest_compile() {
     echo "CPP compile for contest ($1 -> $2)"
