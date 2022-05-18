@@ -1,6 +1,6 @@
 # 📚 dotfiles
 
-Personal dotfiles repo. **Simple** and **=Minimal**.
+Personal dotfiles repo. **Simple** and **Minimal**.
 
 ## 📦 What I use
 
@@ -34,7 +34,9 @@ $ cd .dotfiles
 $ ./install.sh
 ```
 
-3. [optional] **vim**/**neovim** - Open editor and run `:PlugInstall`
+3. Update the `.gitconfig` file with your name and email
+
+4. [optional] **vim**/**neovim** - Open editor and run `:PlugInstall`
 
 ## 🤔 Why do you use X instead of Y?
 
