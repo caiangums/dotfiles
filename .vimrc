@@ -1,8 +1,8 @@
 " < vim-plug >
 call plug#begin('~/.vim/plugged')
 
-" xcode colorscheme
-Plug 'arzg/vim-colors-xcode'
+" colorscheme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " JS syntax highlight
 Plug 'yuezk/vim-js'
@@ -33,10 +33,9 @@ call plug#end()
 " </ vim-plug >
 
 " < plugins >
-" [arzg/vim=colors-xcode] enable colorscheme
-colorscheme xcodedarkhc
-" set green comments for theme
-let g:xcodedarkhc_green_comments = 1
+" [tokyonight] colorscheme
+let g:tokyonight_style = 'night'
+colorscheme tokyonight
 
 " [ctrlp] Hide files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -48,6 +47,10 @@ let g:editorconfig_verbose = 1
 
 " [vim-prettier] enable autoformat
 let g:prettier#autoformat_require_pragma = 0
+
+" [vim-gitgutter] enable gitgutter
+let g:gitgutter_enable_lint = 1
+set updatetime=400
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx

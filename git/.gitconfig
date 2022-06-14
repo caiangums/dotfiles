@@ -3,6 +3,7 @@
 	email = <your@email.com>
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = nvim
 
 [init]
 	defaultBranch = main
