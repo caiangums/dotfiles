@@ -13,7 +13,7 @@ echo " - tmux"
 brew install tmux
 
 echo " - docker"
-brew install --cask docker
+brew install docker
 
 echo " - neovim"
 brew install neovim
@@ -21,6 +21,7 @@ brew install neovim
 echo " - general CLI tools"
 brew install tig bat \
     asdf gnupg \
+    mongocli kubectl \
     tree \
     hugo \
     exercism
@@ -52,18 +53,30 @@ echo "\nenvironment"
 echo " - [web] node v16 \(LTS\)"
 asdf plugin-add nodejs
 # asdf install nodejs 14.17.0 # v14 if needed
-asdf install nodejs 16.15.0
-asdf global nodejs 16.15.0
+asdf install nodejs 16.15.1
+asdf global nodejs 16.15.1
 
 echo " - [web] ruby v3"
 asdf plugin-add ruby
 asdf install ruby 3.0.4
 asdf global ruby 3.0.4
 
-echo " - [web] postgres v13"
+echo " - [web] python v3"
+asdf plugin-add python
+asdf install python 3.10.5
+asdf global python 3.10.5
+
+echo " - [web] postgres CLI"
 asdf plugin-add postgres
-asdf install postgres 13.7
-asdf global postgres 13.7
+asdf install postgres latest
+asdf global postgres
+
+echo " - [web] Lens (kubernates IDE)"
+brew install --cask lens
+
+echo " - [web] terraform"
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
 echo " - [react-native] watchman"
 brew install watchman
