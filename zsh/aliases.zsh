@@ -25,3 +25,7 @@ alias dbcon="psql -h localhost -p 5432 -d postgres"
 alias vim="nvim"
 # open vim at the actual directory
 alias v="vim ."
+
+# edit configs
+alias dot="vim $HOME/.dotfiles"
+alias dotvim="vim $HOME/.vimrc"
