@@ -26,9 +26,6 @@ Plug 'prettier/vim-prettier'
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
 
-" GitHub Copilot
-Plug 'github/copilot.vim'
-
 call plug#end()
 " </ vim-plug >
 
