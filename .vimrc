@@ -31,8 +31,7 @@ call plug#end()
 
 " < plugins >
 " [tokyonight] colorscheme
-let g:tokyonight_style = 'night'
-colorscheme tokyonight
+colorscheme tokyonight-night
 
 " [ctrlp] Hide files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
