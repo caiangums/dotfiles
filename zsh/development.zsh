@@ -18,4 +18,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
 # [asdf]
-source $(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/libexec/asdf.sh
