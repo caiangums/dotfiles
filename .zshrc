@@ -2,7 +2,7 @@
 
 stty -ixon
 
-TERM=xterm-256color
+#TERM=xterm-256color
 
 # <dotfiles>
 __DOTFILES_DIR=".dotfiles"
