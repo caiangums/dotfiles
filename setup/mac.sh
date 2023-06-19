@@ -24,7 +24,8 @@ brew install tig bat \
     mongocli kubectl \
     tree \
     hugo \
-    exercism
+    exercism \
+    ripgrep
 # </applications>
 
 # <configs>
@@ -38,7 +39,7 @@ git clone https://github.com/caiangums/dotfiles.git $HOME/.dotfiles
 # <plugins>
 echo "\nplugins"
 
-echo " - vim-plug (:PlugInstall required)"
+echo " - vim-plug (:PlugInstall required after installation)"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -53,8 +54,9 @@ echo "\nenvironment"
 echo " - [web] node v16 \(LTS\)"
 asdf plugin-add nodejs
 # asdf install nodejs 14.17.0 # v14 if needed
-asdf install nodejs 16.15.1
-asdf global nodejs 16.15.1
+# asdf install nodejs 16.15.1 # v16 if needed
+asdf install nodejs 18.13.0
+asdf global nodejs 18.13.0
 
 echo " - [web] ruby v3"
 asdf plugin-add ruby
@@ -63,8 +65,8 @@ asdf global ruby 3.0.4
 
 echo " - [web] python v3"
 asdf plugin-add python
-asdf install python 3.10.5
-asdf global python 3.10.5
+asdf install python 3.11
+asdf global python 3.11
 
 echo " - [web] postgres CLI"
 asdf plugin-add postgres
