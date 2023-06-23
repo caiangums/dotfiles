@@ -14,9 +14,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
-" Search engine
-Plug 'ctrlpvim/ctrlp.vim'
-
 " (better) Search engine
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
@@ -36,11 +33,6 @@ call plug#end()
 " < plugins >
 " [tokyonight] colorscheme
 colorscheme tokyonight-night
-
-" [ctrlp] Hide files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-" [ctrlp] Show dotfiles
-let g:ctrlp_show_hidden = 1
 
 " [telescope] Map the leader key to a comma
 let mapleader = ','
