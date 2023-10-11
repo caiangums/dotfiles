@@ -113,6 +113,6 @@ inoremap <silent> <C-s> <esc>:w<cr>a
 
 " < commands >
 " lint actual file with eslint (requires yarn + eslint configured)
-:command Eslint ! yarn eslint % --fix
+:command Eslint ! yarn eslint "%" --fix
 
 " < \commands >
