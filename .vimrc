@@ -27,6 +27,10 @@ Plug 'prettier/vim-prettier'
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" nvim-snippy + community maintained snippets 
+Plug 'dcampos/nvim-snippy'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 " </ vim-plug >
 
@@ -51,6 +55,13 @@ let g:prettier#autoformat_require_pragma = 0
 " [vim-gitgutter] enable gitgutter
 let g:gitgutter_enable_lint = 1
 set updatetime=400
+
+" [nvim-snippy] configs to use <Tab> 
+imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
+imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
+smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+xmap <Tab> <Plug>(snippy-cut-text)
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
