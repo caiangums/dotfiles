@@ -17,6 +17,14 @@ contest_compile() {
     g++ -std=c++14 $1 -o $2 -Wl
 }
 
+# file rename to remove initial _ character\
+ai_rename() {
+    for file in _*; do
+        echo "renaming ${file}"
+        mv -n -- "$file" "${file#_}";
+    done;
+}
+
 # connect to local postgres database through psql
 alias dbcon="psql -h localhost -p 5432 -d postgres"
 
