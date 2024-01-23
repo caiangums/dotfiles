@@ -16,6 +16,3 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 # for some cases, your $JAVA_HOME will not be properly configured
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
-
-# [asdf]
-source $(brew --prefix asdf)/libexec/asdf.sh
