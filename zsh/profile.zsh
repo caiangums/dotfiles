@@ -23,3 +23,8 @@ __git_integration
 # setup prompt
 PROMPT='%B%F{14}cg%f%b: %F{10}%~%f $ '
 
+# [homebrew]
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# [asdf]
+source $(brew --prefix asdf)/libexec/asdf.sh
