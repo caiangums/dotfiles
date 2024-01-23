@@ -20,7 +20,7 @@ __create_zshrc() {
 }
 
 __create_alacritty_config() {
-    __ALACRITTY_FILE=".alacritty.yml"
+    __ALACRITTY_FILE=".alacritty.toml"
 
     echo "[config] Alacritty - start"
 
