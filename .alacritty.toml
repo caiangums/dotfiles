@@ -1,4 +1,4 @@
-tabspaces = 8
+#tabspaces = 8
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -15,20 +15,24 @@ x = 0
 y = 0
 
 [scrolling]
-auto_scroll = false
-faux_multiplier = 3
+#auto_scroll = false
+#faux_multiplier = 3
 history = 10000
 multiplier = 3
 
 [window]
 decorations = "full"
 dynamic_padding = false
-startup_mode = "Maximized"
+#startup_mode = "Maximized"
 title = "@caiangums"
 
 [window.dimensions]
-columns = 0
-lines = 0
+columns = 220
+lines = 80
+
+[window.position]
+x = 80
+y = 0
 
 [window.padding]
 x = 0
