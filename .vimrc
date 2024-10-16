@@ -71,6 +71,12 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 " </ plugins >
 
 " < general >
+" fixing color inside a tmux session
+" truecolor
+if (has('termguicolors'))
+    set termguicolors
+endif
+
 " syntax enabled
 syntax enable
 " show numbers
@@ -129,4 +135,6 @@ inoremap <silent> <C-s> <esc>:w<cr>a
 " lint actual file with eslint (requires yarn + eslint configured)
 :command Eslint ! yarn eslint "%" --fix
 
+" next lint actual file with eslint (requires npm + eslint + nextjs configured)
+:command NEslint ! npm run lint --file "%" --fix
 " < \commands >
