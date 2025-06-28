@@ -10,6 +10,12 @@ alias ga="g add"
 alias gr="g reset"
 alias gc="g commit"
 alias gcm="gc -m"
+alias gcp="g cherry-pick"
+alias gpl="g pull"
+alias gpo="g push -u origin HEAD"
+alias gb="g branch"
+alias uncommit="g reset HEAD~1 --soft"
+alias guc="uncommit"
 
 # contest compilation
 contest_compile() {
@@ -37,3 +43,13 @@ alias v="vim ."
 # edit configs
 alias dot="vim $HOME/.dotfiles"
 alias dotvim="vim $HOME/.vimrc"
+
+# scripts
+# run `yarn test` in the current directory
+alias yt="yarn test"
+
+# personal scripts
+# if the `script-manager` command is available, use it to run scripts
+if command -v script-manager &> /dev/null; then
+    alias sm='script-manager'
+fi
