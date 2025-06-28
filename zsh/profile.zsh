@@ -23,6 +23,15 @@ __git_integration
 # setup prompt
 PROMPT='%B%F{14}cg%f%b: %F{10}%~%f $ '
 
+# load personal scripts
+export PATH="$HOME/.dotfiles/bin/script-manager:$PATH"
+
+# script-manager completion
+if command -v script-manager &>/dev/null; then
+  # if script-manager is installed, source it
+  source "$HOME/.dotfiles/bin/script-manager/completions.zsh"
+fi
+
 # [homebrew]
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
