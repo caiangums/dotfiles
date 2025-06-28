@@ -2,7 +2,7 @@
 
 # enter default tmux
 __tmux_create_default_session() {
-    echo "tmux"
+    echo "create default tmux session"
     if [ -z "$TMUX" ]
     then
       tmux attach -t "default" || tmux new -s "default"
