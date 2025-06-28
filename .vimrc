@@ -30,6 +30,9 @@ Plug 'prettier/vim-prettier'
 " Vim Gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" GitHub Copilot
+Plug 'github/copilot.vim'
+
 " nvim-snippy + community maintained snippets 
 Plug 'dcampos/nvim-snippy'
 Plug 'honza/vim-snippets'
@@ -129,12 +132,14 @@ nnoremap <silent> <C-s> <esc>:w<cr>
 inoremap <silent> <C-s> <esc>:w<cr>a
 " do not forget to put this line on your .bashrc
 " stty -ixon
-" < \remap >
+" </ remap >
 
 " < commands >
 " lint actual file with eslint (requires yarn + eslint configured)
 :command Eslint ! yarn eslint "%" --fix
+" some projects have custom lint commands
+:command Lint ! yarn lint "%" --fix
 
 " next lint actual file with eslint (requires npm + eslint + nextjs configured)
 :command NEslint ! npm run lint --file "%" --fix
-" < \commands >
+" </ commands >
