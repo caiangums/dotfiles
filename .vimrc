@@ -142,4 +142,16 @@ inoremap <silent> <C-s> <esc>:w<cr>a
 
 " next lint actual file with eslint (requires npm + eslint + nextjs configured)
 :command NEslint ! npm run lint --file "%" --fix
+
+" execute jest command for actual file (requires yarn + jest configured)
+:command Yjest ! yarn jest "%"
 " </ commands >
+
+" < shortcuts >
+" [personal] call Eslint command at the current file
+nnoremap <leader>ce <cmd>Eslint<cr>
+" [personal] call Prettier command at the current file
+nnoremap <leader>cp <cmd>Prettier<cr>
+" [personal] call `yarn jest` command at the current file
+nnoremap <leader>cj <cmd>Yjest<cr>
+" </ shortcuts >
