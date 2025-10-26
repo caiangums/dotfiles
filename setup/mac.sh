@@ -23,7 +23,6 @@ brew install tig bat \
     asdf gnupg \
     mongocli kubectl \
     tree \
-    hugo \
     exercism \
     ripgrep
 # </applications>
@@ -51,7 +50,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # <environment>
 echo "\nenvironment"
 
-echo " - [web] node v16 \(LTS\)"
+echo " - [web] node v18 \(LTS\)"
 asdf plugin-add nodejs
 # asdf install nodejs 14.17.0 # v14 if needed
 # asdf install nodejs 16.15.1 # v16 if needed
