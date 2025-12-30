@@ -78,15 +78,17 @@ __create_neovimrc() {
 }
 
 
+# New NeoVim configs
+__NEOVIM_CONFIG_DIR=".config"
 __DOTFILES_CONFIGS_NEOVIM_DIR="nvim/.config/nvim"
 __INIT_NEOVIM_LUA_FILE="init.lua"
 __create_neoviminit() {
     echo "[config] neovim - start"
-    mkdir -p "$HOME/$__NEOVIM_DIR"
+    mkdir -p "$HOME/$__NEOVIM_CONFIG_DIR"
 
-    __backup_old_file "$HOME/$__NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE"
+    #__backup_old_file "$HOME/$__NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE"
 
-    ln -s "$HOME/$__DOTFILE_DIR/$__DOTFILES_CONFIGS_NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE" "$HOME/$__NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE"
+    ln -s "$HOME/$__DOTFILE_DIR/$__DOTFILES_CONFIGS_NEOVIM_DIR" "$HOME/$__NEOVIM_CONFIG_DIR"
 
     echo "[config] neovim - end"
 }
