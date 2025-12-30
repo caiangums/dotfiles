@@ -42,15 +42,15 @@
 
 " < plugins >
 " [tokyonight] colorscheme
-colorscheme tokyonight-night
+"colorscheme tokyonight-night
 
 " [telescope] Map the leader key to a comma
-let mapleader = ','
+"let mapleader = ','
 " [telescope] Find files using Telescope command-line sugar
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+"nnoremap <leader>ff <cmd>Telescope find_files<cr>
+"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>fb <cmd>Telescope buffers<cr>
+"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " [editorconfig-vim] show verbose messages
 let g:editorconfig_verbose = 1
