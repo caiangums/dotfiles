@@ -55,10 +55,7 @@ __create_git_config() {
 }
 
 __VIMRC_FILE=".vimrc"
-
 __create_vimrc() {
-    __VIMRC_FILE=".vimrc"
-
     echo "[config] vim - start"
     __backup_old_file "$HOME/$__VIMRC_FILE"
 
@@ -66,15 +63,30 @@ __create_vimrc() {
     echo "[config] vim - end"
 }
 
+# OLD init.vim config
 __NEOVIM_DIR=".config/nvim"
 __NEOVIMRC_FILE="init.vim"
 __create_neovimrc() {
-    echo "[config] neovim - start"
+    echo "[config] neovim (init.vim) - start"
     mkdir -p "$HOME/$__NEOVIM_DIR"
 
     __backup_old_file "$HOME/$__NEOVIM_DIR/$__NEOVIMRC_FILE"
 
     ln -s "$HOME/$__DOTFILE_DIR/$__VIMRC_FILE" "$HOME/$__NEOVIM_DIR/$__NEOVIMRC_FILE"
+
+    echo "[config] neovim (init.vim) - end"
+}
+
+
+__DOTFILES_CONFIGS_NEOVIM_DIR="nvim/.config/nvim"
+__INIT_NEOVIM_LUA_FILE="init.lua"
+__create_neoviminit() {
+    echo "[config] neovim - start"
+    mkdir -p "$HOME/$__NEOVIM_DIR"
+
+    __backup_old_file "$HOME/$__NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE"
+
+    ln -s "$HOME/$__DOTFILE_DIR/$__DOTFILES_CONFIGS_NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE" "$HOME/$__NEOVIM_DIR/$__INIT_NEOVIM_LUA_FILE"
 
     echo "[config] neovim - end"
 }
@@ -97,8 +109,8 @@ __create_tmux_config
 
 __create_git_config
 
-__create_vimrc
+#__create_vimrc
 
-__create_neovimrc
+__create_neoviminit
 
 __create_asdfrc
