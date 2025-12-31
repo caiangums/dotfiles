@@ -1,3 +1,5 @@
 require('plugins')
+require('general')
+require('commands')
 
-vim.cmd([[source ~/.dotfiles/.vimrc]])
+-- vim.cmd([[source ~/.dotfiles/.vimrc]])
