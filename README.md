@@ -7,7 +7,8 @@ Personal dotfiles repo. **Simple** and **Minimal**.
 - [zsh](https://www.zsh.org/) - shell
 - [Alacritty](https://github.com/alacritty/alacritty) - fastest terminal ever
 - [tmux](https://github.com/tmux/tmux) - terminal multiplexer
-- [neovim](https://neovim.io/) - text editor ([vim](https://www.vim.org/) compatible)
+- [neovim](https://neovim.io/) - text editor
+  - _I choose to move forward from [vim](https://www.vim.org/) compatibility_
 - [asdf](https://asdf-vm.com/) - tool version manager (to rule them all?)
 
 ## 🐺 What about the first setup?
@@ -36,7 +37,7 @@ $ ./install.sh
 
 3. Update the `.gitconfig` file with your name and email
 
-4. [optional] **vim**/**neovim** - Open editor and run `:PlugInstall`
+4. **neovim** - Open editor and run `:PlugInstall`
 
 ## 🤔 Why do you use X instead of Y?
 
