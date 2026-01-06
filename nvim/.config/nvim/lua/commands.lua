@@ -69,7 +69,7 @@ vim.api.nvim_create_user_command(
     local current_file = vim.fn.expand('%:p')
     if current_file and current_file ~= '' then
       -- run
-      vim.cmd('!yarn jest"' .. current_file .. '"')
+      vim.cmd('!yarn jest "' .. current_file .. '"')
     else
       -- notify
       vim.notify("Current buffer is not associated with a file.", vim.log.levels.WARN)
