@@ -37,3 +37,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # [asdf]
 source $(brew --prefix asdf)/libexec/asdf.sh
+
+# claude code editor
+export EDITOR=nvim
